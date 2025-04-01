@@ -151,3 +151,56 @@ body.gameboy button {
   border-color: #ff00ff;
   text-shadow: 0 0 3px #000;
 }
+
+/*ABOUT PAGE*/
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  font-size: 0.7rem;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.about-box {
+  border: 3px solid #00fff0;
+  padding: 1rem;
+  background-color: #1a1a2e;
+  box-shadow: 0 0 10px #00fff0;
+  height: fit-content;
+}
+
+.about-title {
+  text-align: center;
+  color: #00fff0;
+  margin: 1rem auto;
+  text-shadow: 0 0 5px #0ff;
+  font-size: 0.9rem;
+}
+
+.about-intro-box {
+  grid-column: span 2;
+  max-width: 1000px;
+  margin: 0 auto 2rem auto;
+}
+
+.about-box:hover {
+  animation: zap 0.3s ease-in-out infinite alternate;
+  box-shadow: 0 0 10px #00fff0, 0 0 20px #ff00ff, 0 0 30px #00fff0;
+  border-color: #ff00ff;
+}
+
+@keyframes zap {
+  0% {
+    transform: rotate(-1deg) scale(1.01);
+    filter: brightness(1.1) hue-rotate(0deg);
+  }
+  100% {
+    transform: rotate(1deg) scale(1.03);
+    filter: brightness(1.3) hue-rotate(20deg);
+  }
+}
