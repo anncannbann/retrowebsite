@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choose Your Own Adventure</title>
+    <link rel="stylesheet" href="retro-portfolio/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="screen">
+      <img
+        src="retro-portfolio/assets/images/avatar.png"
+        alt="Pixel Avatar"
+        class="avatar"
+      />
+      <h1 class="screen-title">👾 Welcome to My Quest</h1>
+      <p class="screen-text">
+        You awaken in a neon-lit dev dungeon. What would you like to learn?
+      </p>
+      <div class="screen-buttons">
+        <button data-screen="who">👤 Who I Am</button>
+        <button data-screen="skills">⚙️ My Skills</button>
+        <button data-screen="xp">🧠 Experience</button>
+        <button data-screen="fun">🎨 Interests</button>
+      </div>
+    </div>
+
+    <div id="scene" class="hidden"></div>
+
+    <script src="retro-portfolio/js/adventure.js"></script>
+  </body>
+</html>
