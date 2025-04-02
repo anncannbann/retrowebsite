@@ -1,56 +1,115 @@
+/* FULL-SCREEN BACKGROUND */
 body {
-  background: #0f0f1b;
-  color: #00fff0;
+  margin: 0;
+  padding: 0;
   font-family: "Press Start 2P", cursive;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: url("/Users/anncannbann/retrowebsite/retro-portfolio/assets/images/bg-cityscape.png")
+    no-repeat center center fixed;
+  background-size: cover;
   height: 100vh;
   overflow: hidden;
-  margin: 0;
+  color: #ffffff;
 }
 
-#screen,
-#scene {
+/* HERO CONTAINER */
+.hero-container {
+  position: relative;
   width: 100%;
-  max-width: 800px;
+  height: 100%;
   text-align: center;
-  padding: 2rem;
-  background: #1a1a2e;
-  border: 3px solid #ff00ff;
-  box-shadow: 0 0 15px #ff00ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.avatar {
+/* AVATAR */
+.avatar-pixel {
   width: 120px;
   image-rendering: pixelated;
   border: 3px solid #00fff0;
   border-radius: 8px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  transition: transform 1.2s ease-in-out;
 }
 
-.screen-buttons {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  margin-top: 2rem;
+/* AVATAR ANIMATION */
+.avatar-move {
+  transform: translateX(300px);
 }
 
-button {
+/* HERO CONTENT */
+.hero-content {
+  transition: opacity 0.6s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+/* TEXT */
+.hero-title {
+  font-size: 1.25rem;
+  text-shadow: 0 0 5px #00fff0;
+  margin: 0;
+}
+
+.hero-subtitle {
+  font-size: 0.7rem;
+  margin: 1rem 0 2rem;
+  text-shadow: 0 0 4px #ff00ff;
+}
+
+/* BUTTON */
+.start-button {
   background: black;
   color: #00fff0;
-  border: 2px solid #00fff0;
-  padding: 1rem;
+  padding: 1rem 2rem;
+  border: 3px solid #00fff0;
+  text-decoration: none;
+  font-size: 0.8rem;
   cursor: pointer;
-  font-family: "Press Start 2P", cursive;
-  font-size: 0.7rem;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease;
 }
 
-button:hover {
-  background: #ff00ff;
-  color: #000;
-  box-shadow: 0 0 5px #ff00ff;
+.start-button:hover {
+  background-color: #ff00ff;
+  color: black;
+  box-shadow: 0 0 8px #ff00ff;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(1.5);
+}
+
+/* LOADING SCREEN */
+#loadingScreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0f0f1b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.loading-text {
+  font-size: 1rem;
+  color: #00fff0;
+  text-shadow: 0 0 8px #00fff0;
 }
 
 .hidden {

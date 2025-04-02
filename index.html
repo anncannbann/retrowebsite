@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retro Portfolio</title>
+    <link rel="stylesheet" href="retro-portfolio/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="hero-container">
+      <img
+        src="retro-portfolio/assets/images/avatar.png"
+        alt="Avatar"
+        class="avatar-pixel"
+        id="avatar"
+      />
+      <div class="hero-content">
+        <h1 class="hero-title">WELCOME<br />PLAYER1</h1>
+        <p class="hero-subtitle">PRESS PLAY TO<br />ENTER STORY MODE</p>
+        <button class="start-button" id="startBtn">START</button>
+        <!-- <div class="social-icons">
+          <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook" /></a>
+          <a href="#"
+            ><img src="assets/icons/instagram.svg" alt="Instagram"
+          /></a>
+          <a href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn" /></a>
+        </div>
+      </div> -->
+    </div>
+
+    <div id="loadingScreen" class="hidden">
+      <p class="loading-text">LOADING...</p>
+    </div>
+
+    <script>
+      const avatar = document.getElementById("avatar");
+      const startBtn = document.getElementById("startBtn");
+      const loadingScreen = document.getElementById("loadingScreen");
+      const heroContent = document.querySelector(".hero-content");
+
+      startBtn.addEventListener("click", () => {
+        avatar.classList.add("avatar-move");
+        heroContent.classList.add("fade-out");
+
+        setTimeout(() => {
+          loadingScreen.classList.remove("hidden");
+        }, 1200);
+
+        setTimeout(() => {
+          window.location.href = "about.html";
+        }, 500);
+      });
+    </script>
+  </body>
+</html>
