@@ -32,28 +32,23 @@
       </div> -->
     </div>
 
-    <div id="loadingScreen" class="hidden">
-      <p class="loading-text">LOADING...</p>
-    </div>
 
+ 
     <script>
-      const avatar = document.getElementById("avatar");
-      const startBtn = document.getElementById("startBtn");
-      const loadingScreen = document.getElementById("loadingScreen");
-      const heroContent = document.querySelector(".hero-content");
-
-      startBtn.addEventListener("click", () => {
-        avatar.classList.add("avatar-move");
-        heroContent.classList.add("fade-out");
-
-        setTimeout(() => {
-          loadingScreen.classList.remove("hidden");
-        }, 1200);
-
-        setTimeout(() => {
-          window.location.href = "about.html";
-        }, 500);
-      });
-    </script>
+        const avatar = document.getElementById('avatar');
+        const startBtn = document.getElementById('startBtn');
+        const heroContent = document.querySelector('.hero-content');
+      
+        startBtn.addEventListener('click', () => {
+          avatar.classList.add('avatar-move');
+          heroContent.classList.add('fade-out');
+      
+          setTimeout(() => {
+            window.location.href = 'about.html';
+          }, 1500);
+        });
+      </script>
+      
+      
   </body>
 </html>
